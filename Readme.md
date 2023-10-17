@@ -4,7 +4,7 @@ Este archivo de Docker Compose está diseñado para configurar un entorno de des
 
 ## Servicios
 
-### Servicio `db` (MySQL)
+### Servicio **db** (MySQL)
 
 ```
 services:
@@ -22,9 +22,9 @@ services:
 ```
 Este servicio define un contenedor MySQL con la siguiente configuración:
 
-magen: Usamos la imagen de MySQL versión `5.7`.
+magen: Usamos la imagen de MySQL versión **5.7**.
 
-Puertos: Mapea el puerto `3307` del host al puerto `3306` del contenedor MySQL.
+Puertos: Mapea el puerto **3307** del host al puerto **3306** del contenedor MySQL.
 
 Volúmenes: Guarda los datos de MySQL en un volumen llamado db_data para que los datos persistan incluso después de detener o eliminar el contenedor.
 
@@ -52,17 +52,17 @@ Volúmenes: Guarda los datos de MySQL en un volumen llamado db_data para que los
        WORDPRESS_DB_NAME: wordpress
 
 ```
-Este servicio define un contenedor de WordPress y depende del servicio `db`. Las configuraciones son las siguientes:
+Este servicio define un contenedor de WordPress y depende del servicio **db**. Las configuraciones son las siguientes:
 
 Imagen: Se utiliza la imagen más reciente de WordPress.
 
-Puertos: Mapea el puerto `8000` del host al puerto `80` del contenedor de WordPress.
+Puertos: Mapea el puerto **8000** del host al puerto **80** del contenedor de WordPress.
 
-Volúmenes: Monta el directorio *`./html`* del host en *`/var/www/html`* del contenedor de WordPress para permitir la personalización de archivos y temas de WordPress.
+Volúmenes: Monta el directorio **./html** del host en **/var/www/html** del contenedor de WordPress para permitir la personalización de archivos y temas de WordPress.
 
 ### Variables de entorno:
 
- - WORDPRESS_DB_HOST: Especifica el nombre del servicio MySQL `(db)` y el puerto `(3306)` al que se conectará el WordPress.
+ - WORDPRESS_DB_HOST: Especifica el nombre del servicio MySQL **(db)** y el puerto **(3306)** al que se conectará el WordPress.
 
  - WORDPRESS_DB_USER: Nombre de usuario de la base de datos (coincide con el definido en el servicio db).
 
